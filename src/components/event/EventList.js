@@ -12,10 +12,10 @@ export const EventList = (props) => {
         <article className="events">
             {
                 events.map(event => {
-                    return <section key={`game--${game.id}`} className="game">
-                        <div className="game__title">{game.title} by {game.maker}</div>
-                        <div className="game__players">{game.number_of_players} players needed</div>
-                        <div className="game__skillLevel">Skill level is {game.skill_level}</div>
+                    return <section key={`event--${event.id}`} className="event">
+                        <div className="event__date">Date of Event: {event.date_of_event }</div>
+                        <div className="event__startTime">Start Time: {event.start_time}</div>
+                        <div className="event__location">Location: {event.location}</div>
                     </section>
                 })
             }
