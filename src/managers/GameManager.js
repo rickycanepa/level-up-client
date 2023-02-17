@@ -13,7 +13,7 @@ export const createGame = (game) => {
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(post)
+        body: JSON.stringify(game)
     })
         .then(res => res.json())
 }
