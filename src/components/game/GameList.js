@@ -23,6 +23,12 @@ export const GameList = (props) => {
                         <div className="game__title">{game.name}</div>
                         <div className="game__players">{game.min_player} players needed</div>
                         <div className="game__skillLevel">Maximum of {game.max_player} players</div>
+                        <div className="game__footer">
+                        <button
+                                onClick={() => {
+                                    navigate({ pathname: `/games/edit/${game.id}`})
+                                }}>Edit</button>
+                        </div>
                     </section>
                 })
             }
